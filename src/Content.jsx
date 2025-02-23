@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import "./Content.css";
 import Group1 from "./assets/groupp.png";
-import Computer from "./assets/Computer.png";
+import Computer from "./assets/computer.png";
 
 const Content = () => {
   const controls = useAnimation();
