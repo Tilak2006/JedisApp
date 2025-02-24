@@ -58,17 +58,21 @@ body {
     text-align: left;
 }
 
+
 .start-btn {
     margin-top: 25px;
     padding: 14px 30px;
     font-size: 1rem;
     background: linear-gradient(to right, #D84040, #A31D1D);
-    color: WHITE;
+    color: white;
     font-weight: bold;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: transform 0.15s ease-out;
+    display: inline-block;  
+    width: auto;           
+    text-align: center;
 }
 
 .start-btn:hover {
@@ -84,8 +88,7 @@ body {
     justify-content: center;
     height: 100vh;
     padding: 50px;
-    opacity: 1;
-    margin: 0px, 50px, 0px, 50px;
+    margin: 0 50px;  
 }
 
 .text-box {
@@ -97,10 +100,9 @@ body {
     width: 60%;
     height: 300px;
     margin-left: 160px;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
     padding: 50px;
-    font-size: 30px;
     box-shadow: 0px 3px 8px rgb(176, 176, 176);
 }
 
@@ -133,9 +135,9 @@ body {
 }
 
 .group-img {
-    width: 110%; /* Increase width slightly */
-    max-width: 350px; /* Increase max size */
-    filter: drop-shadow(0 0 15px rgba(255, 64, 64, 0.6)); /* Soft red glow */
+    width: 110%;
+    max-width: 350px;
+    filter: drop-shadow(0 0 15px rgba(255, 64, 64, 0.6));
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     margin-left: -150px;
 }
@@ -147,8 +149,8 @@ body {
 
 /* 🌟 Computer Image */
 .computer-img {
-    width: 60%; /* Reduce size */
-    max-width: 280px; /* Set a smaller max width */
+    width: 60%;
+    max-width: 280px;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -167,7 +169,7 @@ body {
     color: white;
 }
 
-.text-box h5{
+.text-box h5 {
     color: black;
     font-weight: normal;
     font-weight: 100px;

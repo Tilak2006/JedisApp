@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { useNavigate } from "react-router-dom"; // For navigation
 import "./Content.css";
 import Group1 from "./assets/groupp.png";
 import Computer from "./assets/computer.png";
 
 const Content = () => {
   const controls = useAnimation();
-  const [typingDone, setTypingDone] = useState(false); // Track when typing ends
+  const [typingDone, setTypingDone] = useState(false);
+  const navigate = useNavigate(); // Navigation hook
 
   useEffect(() => {
     const section = document.querySelector(".grid-container");
+
+    if (!section) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -24,7 +28,8 @@ const Content = () => {
     );
 
     observer.observe(section);
-    return () => observer.unobserve(section);
+
+    return () => observer.disconnect();
   }, [controls]);
 
   return (
@@ -45,7 +50,7 @@ const Content = () => {
                   <span className={typingDone ? "hide-cursor" : ""}>
                     <Typewriter
                       words={["JEDIS", "SPEED", "JEDIS"]}
-                      cursor={typingDone ? false : true}
+                      cursor={!typingDone}
                       cursorStyle="_"
                       typeSpeed={100}
                       deleteSpeed={50}
@@ -63,25 +68,21 @@ const Content = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              Sign up to learn about building on the world’s fastest data platform. Our cloud and on-prem solutions help teams like yours build fast apps fast.
+              Sign up to learn about building on the world’s fastest data platform. 
+              Our cloud and on-prem solutions help teams like yours build fast apps fast.
             </motion.p>
 
-            <a 
-  href="https://redis.io/try-free/" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  style={{ textDecoration: "none" }} // Optional: Removes underline
->
-  <motion.button
-    className="start-btn"
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ delay: 0.01, duration: 0.1 }}
-    whileHover={{ scale: 1.1 }}
-  >
-    START FOR FREE
-  </motion.button>
-</a>
+            {/* 🚀 Integrated START FOR FREE Button with Navigation */}
+            <motion.button
+              className="start-btn"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.01, duration: 0.1 }}
+              whileHover={{ scale: 1.1 }}
+              onClick={() => navigate("/login")} // Navigate to login page
+            >
+              START FOR FREE
+            </motion.button>
           </div>
 
           <motion.div
@@ -109,9 +110,8 @@ const Content = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h5>
-            Quickly deploy faster apps on vector databases, caches, NoSQL
-            databases, and custom configurations in any environment out of the
-            box.
+            Quickly deploy faster apps on vector databases, caches, NoSQL databases, 
+            and custom configurations in any environment out of the box.
           </h5>
         </motion.div>
 
