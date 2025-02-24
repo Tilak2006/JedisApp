@@ -66,15 +66,22 @@ const Content = () => {
               Sign up to learn about building on the world’s fastest data platform. Our cloud and on-prem solutions help teams like yours build fast apps fast.
             </motion.p>
 
-            <motion.button
-              className="start-btn"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.3 }}
-              whileHover={{ scale: 1.1 }}
-            >
-              START FOR FREE
-            </motion.button>
+            <a 
+  href="https://redis.io/try-free/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  style={{ textDecoration: "none" }} // Optional: Removes underline
+>
+  <motion.button
+    className="start-btn"
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: 0.01, duration: 0.1 }}
+    whileHover={{ scale: 1.1 }}
+  >
+    START FOR FREE
+  </motion.button>
+</a>
           </div>
 
           <motion.div
