@@ -27,52 +27,59 @@ body {
     position: relative;
 }
 
-.text-container {
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    z-index: 2;
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px;
+    }
+
+    .text-container {
+        width: 100%;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .text-container h1 {
+        font-size: 4rem;
+    }
+
+    .start-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .group-img {
+        width: 90%;
+        max-width: 300px;
+    }
 }
 
-.text-container h1 {
-    font-size: 6rem;
-    font-weight: bold;
-    color: black;
-    text-transform: uppercase;
-    position: relative;
-    line-height: 1.1;
-    letter-spacing: -1px;
-    text-align: left;
-    z-index: 5;
-}
+@media (max-width: 768px) {
+    .text-container h1 {
+        font-size: 3rem;
+    }
 
-.highlight {
-    color: #D84040;
-}
+    .text-container p {
+        font-size: 1rem;
+    }
 
-.text-container p {
-    font-size: 1rem;
-    color: rgb(32, 32, 32);
-    margin-top: 15px;
-    line-height: 1.6;
-    text-align: left;
-}
+    .start-btn {
+        font-size: 0.9rem;
+        padding: 12px 24px;
+    }
 
-.start-btn {
-    margin-top: 25px;
-    padding: 14px 30px;
-    font-size: 1rem;
-    background: linear-gradient(to right, #D84040, #A31D1D);
-    color: WHITE;
-    font-weight: bold;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: transform 0.15s ease-out;
-}
-
-.start-btn:hover {
-    transform: scale(1.1);
+    .group-img {
+        max-width: 250px;
+    }
 }
 
 /* Grid Layout */
@@ -84,48 +91,46 @@ body {
     justify-content: center;
     height: 100vh;
     padding: 50px;
-    opacity: 1;
-    margin: 0px, 50px, 0px, 50px;
 }
 
-.text-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgb(255, 148, 148);
-    border-radius: 10px;
-    width: 60%;
-    height: 300px;
-    margin-left: 160px;
-    font-size: 32px;
-    font-weight: bold;
-    padding: 50px;
-    font-size: 30px;
-    box-shadow: 0px 3px 8px rgb(176, 176, 176);
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+        height: auto;
+        padding: 40px;
+    }
+
+    .text-box {
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+        font-size: 24px;
+    }
+
+    .image-box {
+        width: 90%;
+        margin: auto;
+    }
+
+    .grid-image {
+        max-width: 80%;
+    }
 }
 
-.image-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    height: 200px;
-    font-weight: bold;
-    position: relative;
-    margin-right: 100px;
+@media (max-width: 600px) {
+    .text-box {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .grid-image {
+        max-width: 70%;
+    }
 }
 
-.grid-image {
-    width: 100%;
-    max-width: 350px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.grid-image:hover {
-    transform: scale(1.1);
-}
-
-/* Group Image with Glow Effect */
+/* Group Image */
 .image-container {
     position: relative;
     width: 300px;
@@ -133,9 +138,9 @@ body {
 }
 
 .group-img {
-    width: 110%; /* Increase width slightly */
-    max-width: 350px; /* Increase max size */
-    filter: drop-shadow(0 0 15px rgba(255, 64, 64, 0.6)); /* Soft red glow */
+    width: 110%;
+    max-width: 350px;
+    filter: drop-shadow(0 0 15px rgba(255, 64, 64, 0.6));
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     margin-left: -150px;
 }
@@ -145,15 +150,11 @@ body {
     filter: drop-shadow(0 0 30px rgba(255, 124, 124, 0.8));
 }
 
-/* 🌟 Computer Image */
-.computer-img {
-    width: 60%; /* Reduce size */
-    max-width: 280px; /* Set a smaller max width */
-    transition: transform 0.2s ease-in-out;
-}
-
-.computer-img:hover {
-    transform: scale(1.05);
+@media (max-width: 768px) {
+    .group-img {
+        max-width: 250px;
+        margin-left: 0;
+    }
 }
 
 /* Selection Color */
@@ -167,11 +168,9 @@ body {
     color: white;
 }
 
-.text-box h5{
+/* Restored Styles for .text-box h5 */
+.text-box h5 {
     color: black;
     font-weight: normal;
-    font-weight: 100px;
     position: relative;
-    align-items: center;
-    justify-content: center;
 }
