@@ -43,16 +43,16 @@ const Content = () => {
                 GET STARTED WITH&nbsp;
                 <span className="highlight typing-effect">
                   <span className={typingDone ? "hide-cursor" : ""}>
-                  <Typewriter
-                  words={["JEDIS", "SPEED", "JEDIS"]}
-                  cursor={typingDone ? false : true} 
-                  cursorStyle="_"
-                  typeSpeed={100}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                  loop={1}
-                  onLoopDone={() => setTypingDone(true)} 
-                />
+                    <Typewriter
+                      words={["JEDIS", "SPEED", "JEDIS"]}
+                      cursor={typingDone ? false : true}
+                      cursorStyle="_"
+                      typeSpeed={100}
+                      deleteSpeed={50}
+                      delaySpeed={1000}
+                      loop={1}
+                      onLoopDone={() => setTypingDone(true)}
+                    />
                   </span>
                 </span>
               </h1>
