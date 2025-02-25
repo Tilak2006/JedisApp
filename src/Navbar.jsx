@@ -3,20 +3,22 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
       <div className="logo">JEDIS</div>
-      <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
-        <div className={isOpen ? "bar open" : "bar"}></div>
-        <div className={isOpen ? "bar open" : "bar"}></div>
-        <div className={isOpen ? "bar open" : "bar"}></div>
+      
+      {/* Hamburger Menu Icon */}
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
       </div>
-      <ul className={isOpen ? "nav-links active" : "nav-links"}>
-        <li><Link to="/">HOME</Link></li>
-        <li><Link to="/about">ABOUT</Link></li>
-        <li><Link to="/contact">CONTACT</Link></li>
+
+      {/* Navigation Links */}
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <li><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></li>
+        <li><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT</Link></li>
+        <li><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></li>
       </ul>
     </nav>
   );
