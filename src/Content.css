@@ -17,7 +17,7 @@ body {
     padding-top: 72px;
 }
 
-/* Main Content */
+
 .content {
     display: flex;
     justify-content: space-between;
@@ -128,7 +128,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Group Image with Glow Effect */
+
 .image-container {
     position: relative;
     width: 300px;
@@ -148,7 +148,7 @@ body {
     filter: drop-shadow(0 0 30px rgba(255, 124, 124, 0.8));
 }
 
-/* 🌟 Computer Image */
+
 .computer-img {
     width: 60%;
     max-width: 280px;
@@ -178,7 +178,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* Hide Group Image in Mobile */
+
 @media (max-width: 768px) {
     
     .group-img {
@@ -230,7 +230,7 @@ body {
 }
 .navbar {
     z-index: 999;
-    height: 80px; /* Whatever your navbar height is */
+    height: 80px; 
     position: fixed;
     top: 0;
     width: 100%;

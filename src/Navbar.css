@@ -5,10 +5,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-
-/* 🔹 Navbar */
 .navbar {
     
     position: fixed;
@@ -24,14 +20,12 @@
     z-index: 1000;
 }
 
-
-
-/* 🔹 Logo */
 .logo {
     font-family: 'Rubik Wet Paint', cursive;
     font-size: 28px;
     color: #D84040;
     cursor: pointer;
+    margin-bottom: -5px;
 }
 
 .logo:hover {
@@ -40,17 +34,15 @@
                  0 0 5px rgba(131, 131, 131, 0.6);
 }
 
-/* 🔹 Desktop Navigation */
 .nav-links {
     display: flex;
     gap: 30px;
 }
 
-
 .nav-links li {
     list-style: none;
     display: inline-block; /* This makes li respect transforms */
-    transition: transform 0.3s ease; /* Smooth hover */
+    transition: transform 0.3s ease; 
 }
 .nav-links a {
     font-family: 'Rubik', sans-serif;
@@ -63,10 +55,10 @@
 }
 
 .nav-links li:hover a {
-    color: white; /* Color change on hover */
+    color: white; 
 }
 
-/* 🔹 Hamburger Menu (Hidden on Desktop) */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -82,7 +74,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Transform hamburger into "X" */
 .hamburger.open .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -101,7 +92,7 @@
         display: flex;
     }
 
-    /* Sidebar-style navigation */
+    
     .nav-links-container {
         position: fixed;
         top: 0;
@@ -137,7 +128,6 @@
         color: cyan;
     }
 
-    /* 🔹 Dark Overlay when Menu Opens */
     .overlay {
         position: fixed;
         top: 0;

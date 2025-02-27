@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import GoogleAuth from "./GoogleAuth";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -54,14 +55,10 @@ const Login = () => {
       >
         <h2>Login to JEDIS</h2>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="google-login"
-          onClick={handleGoogleLogin}
-        >
-          Login with Google
-        </motion.button>
+        <div className="google-login">
+  <GoogleAuth />
+</div>
+
 
         <form onSubmit={handleEmailLogin}>
           <input

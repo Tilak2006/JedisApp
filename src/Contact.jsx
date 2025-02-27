@@ -13,7 +13,7 @@ const Contact = () => {
       <motion.div 
         className="contact-container"
         whileHover={{ y: -5 }}
-        transition={{ duration: 0.2 }} // Instant shadow effect
+        transition={{ duration: 0.2 }} 
       >
         <motion.h1 
           className="contact-heading"
@@ -35,7 +35,7 @@ const Contact = () => {
 
         <div className="contact-details">
           <motion.a 
-            href="mailto:tilakj0108@gmail.com"
+            href="mail to :tilakj0108@gmail.com"
             className="contact-link"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

@@ -72,7 +72,7 @@ const Content = () => {
               Our cloud and on-prem solutions help teams like yours build fast apps fast.
             </motion.p>
 
-            {/* 🚀 Integrated START FOR FREE Button with Navigation */}
+            
             <motion.button
               className="start-btn"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -97,7 +97,7 @@ const Content = () => {
         </div>
       </section>
 
-      {/* Grid Section (Computer Image + Text Box) */}
+      
       <motion.section
         className="grid-container"
         initial={{ opacity: 0, y: 50 }}
