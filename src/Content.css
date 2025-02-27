@@ -219,6 +219,7 @@ body {
 
     .text-container h1 {
         font-size: 3rem;
+        padding-right: 20px;
     }
 
     .start-btn {
