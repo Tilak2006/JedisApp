@@ -87,7 +87,7 @@ const Dashboard = () => {
           )}
         </header>
 
-        {/* 🔑 INPUT SECTION */}
+  
         <section className="content-section">
           <h3>INPUT FIELDS FOR KEY-VALUE PAIR</h3>
           <div className="input-group">
@@ -103,7 +103,7 @@ const Dashboard = () => {
           </div>
         </section>
 
-        {/* 🔍 RETRIEVE SECTION */}
+       
         <section className="content-section">
           <h3>RETRIEVE DATA AND DISPLAY</h3>
           <div className="input-group">
@@ -118,7 +118,7 @@ const Dashboard = () => {
           </div>
         </section>
 
-        {/* ❌ DELETE SECTION */}
+     
         <section className="content-section">
           <h3>DELETE KEY-VALUE PAIRS</h3>
           <div className="input-group">

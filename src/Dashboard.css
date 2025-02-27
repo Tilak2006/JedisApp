@@ -201,4 +201,44 @@
       display: block; /* Show hamburger only in mobile */
     }
   }
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
   
+    .sidebar {
+      transform: translateX(-100%); /* Hidden by default */
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100vh;
+      flex-direction: column;
+      z-index: 10;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .sidebar.open {
+      transform: translateX(0);
+    }
+  
+    .content-section {
+      width: 100%; /* Full Width */
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  
+    .input-group {
+      flex-direction: column; /* Stack Inputs */
+      gap: 10px;
+    }
+  
+    .input-box {
+      width: 100%; /* Full width input */
+    }
+  
+    .red-button {
+      width: 100%; /* Full width button */
+    }
+  }
