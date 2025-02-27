@@ -79,7 +79,8 @@ const Content = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.01, duration: 0.1 }}
               whileHover={{ scale: 1.1 }}
-              onClick={() => navigate("/login")} // Navigate to login page
+              onClick={() => navigate("/dashboard")} //gies to dashboard
+
             >
               START FOR FREE
             </motion.button>
