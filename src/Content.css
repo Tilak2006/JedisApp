@@ -228,3 +228,23 @@ body {
         font-size: 1rem;
     }
 }
+@media screen and (max-width: 768px) {
+    .contact-heading {
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: bold;
+        width: 0;
+        animation: typing 2s steps(10, end) forwards;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+}
