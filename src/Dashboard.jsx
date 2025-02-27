@@ -8,6 +8,9 @@ const Dashboard = () => {
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [open, setOpen] = useState(false);
@@ -41,6 +44,7 @@ const Dashboard = () => {
       <div className="hamburger" onClick={toggleSidebar}>
         {sidebarOpen ? "✖️" : "☰"}
       </div>
+
       <motion.aside
   className={`sidebar ${open ? "open" : ""}`}
   initial={{ x: -200 }}
