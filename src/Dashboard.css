@@ -157,4 +157,48 @@
     height: 100%;
     object-fit: cover;
   }
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    z-index: 99;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .sidebar {
+      display: none;
+    }
+  
+    .sidebar.open {
+      display: flex;
+    }
+  }
+  .sidebar {
+    display: flex; /* Always visible by default */
+  }
+  
+  .hamburger {
+    display: none; /* Hidden on desktop */
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none; /* Hidden by default on mobile */
+    }
+  
+    .sidebar.open {
+      display: flex; /* Visible only when hamburger clicked */
+    }
+  
+    .hamburger {
+      display: block; /* Show hamburger only in mobile */
+    }
+  }
   
