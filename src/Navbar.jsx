@@ -19,6 +19,7 @@ const Navbar = () => {
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
+          <div className="bar"></div>
         </div>
 
         {/* Navigation Links (Sidebar) */}
@@ -27,6 +28,7 @@ const Navbar = () => {
             <li><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></li>
             <li><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></li>
+            <li><Link to="/login" onClick={() => setMenuOpen(false)}>LOGIN</Link></li>
           </ul>
         </div>
 

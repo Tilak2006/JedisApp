@@ -14,7 +14,7 @@ const About = () => {
         className="about-container"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        whileHover={{ scale: 1.02 }} // Slight expansion on hover
+        whileHover={{ scale: 1.01 }} // Adjusted hover for better mobile UX
         transition={{ duration: 0.3 }}
       >
         <motion.h1 

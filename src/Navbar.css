@@ -46,20 +46,24 @@
     gap: 30px;
 }
 
+
 .nav-links li {
     list-style: none;
+    display: inline-block; /* This makes li respect transforms */
+    transition: transform 0.3s ease; /* Smooth hover */
 }
-
 .nav-links a {
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #D84040;
     text-decoration: none;
+    transition: transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: white;
+.nav-links li:hover a {
+    color: white; /* Color change on hover */
 }
 
 /* 🔹 Hamburger Menu (Hidden on Desktop) */

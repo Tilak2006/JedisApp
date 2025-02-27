@@ -180,6 +180,7 @@ body {
 }
 /* Hide Group Image in Mobile */
 @media (max-width: 768px) {
+    
     .group-img {
         display: none;
     }
@@ -219,7 +220,6 @@ body {
 
     .text-container h1 {
         font-size: 3rem;
-        padding-right: 20px;
     }
 
     .start-btn {
@@ -228,23 +228,13 @@ body {
         font-size: 1rem;
     }
 }
-@media screen and (max-width: 768px) {
-    .contact-heading {
-        overflow: hidden;
-        white-space: nowrap;
-        display: inline-block;
-        font-size: 2rem;
-        font-weight: bold;
-        width: 0;
-        animation: typing 2s steps(10, end) forwards;
-    }
-
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-        to {
-            width: 100%;
-        }
-    }
+.navbar {
+    z-index: 999;
+    height: 80px; /* Whatever your navbar height is */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.about-section {
+    margin-top: 80px; /* Push content below navbar */
 }
