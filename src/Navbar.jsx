@@ -20,6 +20,7 @@ const Navbar = () => {
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
+          ☰
         </div>
 
         {/* Navigation Links (Sidebar) */}
