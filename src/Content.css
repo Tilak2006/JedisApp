@@ -209,9 +209,12 @@ body {
     }
 
     .text-box {
-        width: 90%;
-        font-size: 20px;
-        padding: 20px;
+        width: 90%; /* Increase width */
+        max-width: 500px; /* Increase max width */
+        font-size: 20px; /* Increase font size */
+        padding: 20px; /* Increase padding */
+        margin: 20px auto;
+        text-align: center;
     }
 
     .text-container h1 {
