@@ -4,6 +4,10 @@ import "./Dashboard.css";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [open, setOpen] = useState(false);
@@ -12,7 +16,7 @@ const Dashboard = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
       setUser(storedUser);
-      console.log("Welcome Master Jedi ⚔️", storedUser);
+      console.log("Welcome to Jedis", storedUser);
     }
   }, []);
 
@@ -34,10 +38,9 @@ const Dashboard = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="hamburger" onClick={() => setOpen(!open)}>
-        ☰
+      <div className="hamburger" onClick={toggleSidebar}>
+        {sidebarOpen ? "✖️" : "☰"}
       </div>
-
       <motion.aside
   className={`sidebar ${open ? "open" : ""}`}
   initial={{ x: -200 }}
